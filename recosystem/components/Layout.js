@@ -6,7 +6,7 @@ export default function Layout({ title, children }) {
   return (
     <>
       <Head>
-        <title>{title ? title + '- REcosystem' : 'REcosystem'}</title>
+        <title>{title ? title + ' - REcosystem' : 'REcosystem'}</title>
         <meta
           name="description"
           content="ECommerce Website for Recycled Waste Paper Products"

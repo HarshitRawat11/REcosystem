@@ -10,6 +10,7 @@ const data = {
       numReviews: 8,
       countInStock: 20,
       description: 'A recycled diary',
+      price: 100,
     },
     {
       name: 'File',
@@ -21,6 +22,7 @@ const data = {
       numReviews: 8,
       countInStock: 20,
       description: 'A recycled file',
+      price: 100,
     },
     {
       name: 'Notebook',
@@ -32,6 +34,7 @@ const data = {
       numReviews: 8,
       countInStock: 20,
       description: 'A recycled notebook',
+      price: 100,
     },
     {
       name: 'Notepad',
@@ -43,6 +46,7 @@ const data = {
       numReviews: 8,
       countInStock: 20,
       description: 'A recycled notepad',
+      price: 100,
     },
     {
       name: 'Pen',
@@ -54,6 +58,7 @@ const data = {
       numReviews: 8,
       countInStock: 20,
       description: 'A recycled pen',
+      price: 100,
     },
     {
       name: 'Pencil',
@@ -65,6 +70,7 @@ const data = {
       numReviews: 8,
       countInStock: 20,
       description: 'A recycled pencil',
+      price: 100,
     },
     // {
     //   name: 'SeedPen',
@@ -76,6 +82,7 @@ const data = {
     //   numReviews: 8,
     //   countInStock: 20,
     //   description: 'A recycled seed pen',
+    //   price: 100
     // }
   ],
 };
