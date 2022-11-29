@@ -33,31 +33,18 @@ export default function ProductScreen(props) {
 
   return (
     <Layout title={product.name}>
-      <div className="py-2">
+      <div className="py-8 font-bold">
         <Link href="/">Back to Products</Link>
       </div>
-      <div className="grid md:grid-cols-4 md:gap-3">
-        <div className="md:col-span-2">
+      <div className="grid md:grid-cols-3 md:gap-3">
+        <div className="md:col-span-2 rounded-lg">
           <Image
             src={product.image}
             alt={product.name}
-            width={640}
-            height={640}
-            layout="responsive"
+            width={500}
+            height={450}
+            // layout="responsive"
           ></Image>
-        </div>
-        <div className="">
-          <ul>
-            <li>
-              <h1 className="text-lg">{product.name}</h1>
-            </li>
-            <li>Category: {product.category}</li>
-            <li>Brand: {product.brand}</li>
-            <li>
-              {product.rating} of {product.numReviews} reviews
-            </li>
-            <li>Description: {product.description}</li>
-          </ul>
         </div>
         <div>
           <div className="card p-5">
@@ -76,6 +63,25 @@ export default function ProductScreen(props) {
               Add to cart
             </button>
           </div>
+        </div>
+        <div className="">
+          <ul>
+            <li>
+              <h1 className="text-xl font-medium tracking-wide">
+                {product.name}
+              </h1>
+            </li>
+            <li className="text-lg font-medium">
+              Category: {product.category}
+            </li>
+            <li className="text-lg font-medium">Brand: {product.brand}</li>
+            {/* <li>
+              {product.rating} of {product.numReviews} reviews
+            </li> */}
+            <li className="text-lg font-base text-justify">
+              Description: {product.description}
+            </li>
+          </ul>
         </div>
       </div>
     </Layout>

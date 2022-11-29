@@ -42,8 +42,8 @@ export default function PaymentScreen() {
     <Layout title="Payment Method">
       <CheckoutWizard activeStep={2} />
       <form className="mx-auto max-w-screen-md" onSubmit={submitHandler}>
-        <h1 className="mb-4 text-xl">Payment Method</h1>
-        {['Paytm', 'Stripe', 'CashOnDelivery'].map((payment) => (
+        <h1 className="mb-4 mt-16 text-2xl font-medium">Payment Method</h1>
+        {['PAYTM', 'STRIPE', 'CASH'].map((payment) => (
           <div key={payment} className="mb-4">
             <input
               name="paymentMethod"

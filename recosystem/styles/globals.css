@@ -11,14 +11,14 @@ body {
 }
 
 a {
-  @apply text-blue-600 hover:text-blue-800;
+  @apply font-medium text-gray-600 hover:text-black;
 }
 
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -26,24 +26,24 @@ a {
     color: white;
     background: black;
   }
+} */
+
+.card {
+  @apply my-5 block rounded-lg border border-gray-300 shadow-xl hover:shadow-md;
 }
 
-.card{
-  @apply mb-5 block rounded-lg border border-gray-200 shadow-md;
-}
-
-.primary-button{ 
-  @apply bg-amber-300 py-2 px-4 shadow outline-none hover:bg-amber-400 active:bg-amber-500;
+.primary-button {
+  @apply rounded font-medium bg-amber-300 mt-1 py-3 px-4 shadow outline-none hover:bg-amber-400 active:bg-amber-500;
 }
 
 .default-button {
-  @apply rounded bg-gray-100 py-2  px-4 text-black shadow outline-none hover:bg-gray-200  active:bg-gray-300;
+  @apply rounded bg-gray-100 py-2 px-4 text-black shadow outline-none hover:bg-gray-200  active:bg-gray-300;
 }
 
 input,
 select,
 textarea {
-  @apply rounded border p-2  outline-none ring-indigo-300  focus:ring;
+  @apply rounded border p-2 outline-none ring-indigo-300 focus:ring;
 }
 
 .dropdown-link {
@@ -56,4 +56,29 @@ textarea {
 
 .alert-success {
   @apply my-3 rounded-lg bg-green-100 p-3 text-green-700;
+}
+
+.socialLogin {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialIconDiv {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.socialIconImg {
+  width: 100%;
 }

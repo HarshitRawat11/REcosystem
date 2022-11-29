@@ -56,7 +56,7 @@ export default function ShippingScreen() {
         className="mx-auto max-w-screen-md"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <h1 className="mb-4 text-xl">Shipping Address</h1>
+        <h1 className="mb-4 mt-6 text-2xl font-medium">Shipping Adress</h1>
         <div className="mb-4">
           <label htmlFor="fullName">Full Name</label>
           <input

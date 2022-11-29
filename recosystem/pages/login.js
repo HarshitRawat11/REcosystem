@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import { getError } from '../utils/error';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import OAuth from '../components/OAuth';
 
 export default function LoginScreen() {
   const { data: session } = useSession();
@@ -24,6 +25,7 @@ export default function LoginScreen() {
     register,
     formState: { errors },
   } = useForm();
+
   const submitHandler = async ({ email, password }) => {
     try {
       const result = await signIn('credentials', {
@@ -44,9 +46,9 @@ export default function LoginScreen() {
         className="mx-auto max-w-screen-md"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <h1 className="mb-4 text-xl">Login</h1>
-        <div className="mb-4">
-          <label htmlFor="email">Email</label>
+        <h1 className="mb-10 font-medium text-2xl">SIGN IN</h1>
+        <div className="mb-10 font-medium">
+          <label htmlFor="email">EMAIL</label>
           <input
             type="email"
             {...register('email', {
@@ -64,8 +66,8 @@ export default function LoginScreen() {
             <div className="text-red-500">{errors.email.message}</div>
           )}
         </div>
-        <div className="mb-4">
-          <label htmlFor="password">Password</label>
+        <div className="mb-10 font-medium">
+          <label htmlFor="password">PASSWORD</label>
           <input
             type="password"
             {...register('password', {
@@ -80,10 +82,11 @@ export default function LoginScreen() {
             <div className="text-red-500 ">{errors.password.message}</div>
           )}
         </div>
-        <div className="mb-4 ">
-          <button className="primary-button">Login</button>
+        <div className="mb-6 font-medium">
+          <button className="primary-button">LOGIN</button>
+          <OAuth />
         </div>
-        <div className="mb-4 ">
+        <div className="mb-4 font-medium">
           Don&apos;t have an account? &nbsp;
           <Link href={`/register?redirect=${redirect || '/'}`}>Register</Link>
         </div>

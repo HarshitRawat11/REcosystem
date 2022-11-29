@@ -170,7 +170,7 @@ function OrderScreen() {
 
   return (
     <Layout title={`Order ${orderId}`}>
-      <h1 className="mb-4 text-xl">{`Order ${orderId}`}</h1>
+      <h1 className="mb-3 mt-4 text-2xl font-semibold">{`Order ${orderId}`}</h1>
       {loading ? (
         <div>Loading...</div>
       ) : error ? (
@@ -179,7 +179,7 @@ function OrderScreen() {
         <div className="grid md:grid-cols-4 md:gap-5">
           <div className="overflow-x-auto md:col-span-3">
             <div className="card  p-5">
-              <h2 className="mb-2 text-lg">Shipping Address</h2>
+              <h2 className="mb-2 text-xl font-medium">Shipping Address</h2>
               <div>
                 {shippingAddress.fullName}, {shippingAddress.address},{' '}
                 {shippingAddress.city}, {shippingAddress.postalCode},{' '}
@@ -193,7 +193,7 @@ function OrderScreen() {
             </div>
 
             <div className="card p-5">
-              <h2 className="mb-2 text-lg">Payment Method</h2>
+              <h2 className="mb-2 text-xl font-medium">Payment Method</h2>
               <div>{paymentMethod}</div>
               {isPaid ? (
                 <div className="alert-success">Paid at {paidAt}</div>
@@ -203,19 +203,19 @@ function OrderScreen() {
             </div>
 
             <div className="card overflow-x-auto p-5">
-              <h2 className="mb-2 text-lg">Order Items</h2>
+              <h2 className="mb-2 text-xl font-medium">Order Items</h2>
               <table className="min-w-full">
                 <thead className="border-b">
                   <tr>
                     <th className="px-5 text-left">Item</th>
-                    <th className="    p-5 text-right">Quantity</th>
-                    <th className="  p-5 text-right">Price</th>
+                    <th className="p-5 text-right">Quantity</th>
+                    <th className="p-5 text-right">Price</th>
                     <th className="p-5 text-right">Subtotal</th>
                   </tr>
                 </thead>
                 <tbody>
                   {orderItems.map((item) => (
-                    <tr key={item._id} className="border-b">
+                    <tr key={item._id} className="border-black">
                       <td>
                         <Link href={`/product/${item.slug}`}>
                           <a className="flex items-center">
@@ -243,7 +243,7 @@ function OrderScreen() {
           </div>
           <div>
             <div className="card  p-5">
-              <h2 className="mb-2 text-lg">Order Summary</h2>
+              <h2 className="mb-2 text-xl font-medium">Order Summary</h2>
               <ul>
                 <li>
                   <div className="mb-2 flex justify-between">
@@ -275,11 +275,11 @@ function OrderScreen() {
                       <div>Loading...</div>
                     ) : (
                       <div className="w-full">
-                        <PayPalButtons
+                        {/* <PayPalButtons
                           createOrder={createOrder}
                           onApprove={onApprove}
                           onError={onError}
-                        ></PayPalButtons>
+                        ></PayPalButtons> */}
                       </div>
                     )}
                     {loadingPay && <div>Loading...</div>}

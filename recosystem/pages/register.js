@@ -7,6 +7,7 @@ import { getError } from '../utils/error';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import OAuth from '../components/OAuth';
 
 export default function LoginScreen() {
   const { data: session } = useSession();
@@ -52,9 +53,9 @@ export default function LoginScreen() {
         className="mx-auto max-w-screen-md"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <h1 className="mb-4 text-xl">Create Account</h1>
-        <div className="mb-4">
-          <label htmlFor="name">Name</label>
+        <h1 className="mb-10 font-medium text-2xl">CREATE ACCOUNT</h1>
+        <div className="mb-6 font-medium">
+          <label htmlFor="name">NAME</label>
           <input
             type="text"
             className="w-full"
@@ -68,9 +69,8 @@ export default function LoginScreen() {
             <div className="text-red-500">{errors.name.message}</div>
           )}
         </div>
-
-        <div className="mb-4">
-          <label htmlFor="email">Email</label>
+        <div className="mb-6 font-medium">
+          <label htmlFor="email">EMAIL</label>
           <input
             type="email"
             {...register('email', {
@@ -87,8 +87,8 @@ export default function LoginScreen() {
             <div className="text-red-500">{errors.email.message}</div>
           )}
         </div>
-        <div className="mb-4">
-          <label htmlFor="password">Password</label>
+        <div className="mb-6 font-medium">
+          <label htmlFor="password">PASSWORD</label>
           <input
             type="password"
             {...register('password', {
@@ -103,8 +103,8 @@ export default function LoginScreen() {
             <div className="text-red-500 ">{errors.password.message}</div>
           )}
         </div>
-        <div className="mb-4">
-          <label htmlFor="confirmPassword">Confirm Password</label>
+        <div className="mb-6 font-medium">
+          <label htmlFor="confirmPassword">CONFIRM PASSWORD</label>
           <input
             className="w-full"
             type="password"
@@ -128,11 +128,11 @@ export default function LoginScreen() {
               <div className="text-red-500 ">Password do not match</div>
             )}
         </div>
-
-        <div className="mb-4 ">
-          <button className="primary-button">Register</button>
+        <div className="mb-6 font-medium">
+          <button className="primary-button">REGISTER</button>
+          <OAuth />
         </div>
-        <div className="mb-4 ">
+        <div className="mb-4 font-medium">
           Don&apos;t have an account? &nbsp;
           <Link href={`/register?redirect=${redirect || '/'}`}>Register</Link>
         </div>
